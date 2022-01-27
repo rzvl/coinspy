@@ -16,6 +16,13 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     background-color: ${({ theme }) => theme.colors.white};
   }
+
+  hr {
+    width: 60%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    border-top: 1px solid ${({ theme }) => theme.colors.lightGray};
+  }
 `;
 
 export default GlobalStyle;

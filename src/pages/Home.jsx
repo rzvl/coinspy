@@ -1,11 +1,12 @@
 import millify from 'millify';
-import StatsCard from '../components/StatsCard';
-import { Container } from '../styles/Container.styled';
-import { StyledCenteredTitle, StyledCenteredSubtitle } from '../styles/Title.styled';
+import { CryptosTable, StatsCard } from '../components'
 import { useGetCryptosQuery } from '../services/cryptoApi';
+import { StyledCenteredTitle, StyledCenteredSubtitle } from '../styles/Title.styled';
+import { Container } from '../styles/Container.styled';
+import ShowMoreBtn from '../components/ShowMoreBtn';
 
 const Home = () => {
-  const {data, isFetching} = useGetCryptosQuery();
+  const {data, isFetching} = useGetCryptosQuery(10);
   const globalStats = data?.data?.stats;
 
   if(isFetching) return 'Loading...';
@@ -38,6 +39,9 @@ const Home = () => {
       <StyledCenteredTitle>Global Crypto Stats</StyledCenteredTitle>
       <StyledCenteredSubtitle>Total Cryptocurrencies and Market Stats</StyledCenteredSubtitle>
       <StatsCard list={marketStats} />
+      <StyledCenteredTitle>Top 10 Cryptocurrencies by Market Cap</StyledCenteredTitle>
+      <CryptosTable simplified />
+      <ShowMoreBtn text={'Show More Cryptos'} to={'cryptocurrencies'} />
     </Container>
   );
 };

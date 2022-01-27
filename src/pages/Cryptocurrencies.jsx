@@ -1,9 +1,10 @@
 import { Container } from '../styles/Container.styled';
+import {CryptosTable} from '../components';
 
 const Cryptocurrencies = () => {
   return (
-    <Container>
-      <span>This is cryptocurrencies page</span>
+    <Container> 
+      <CryptosTable />
     </Container>
   );
 };

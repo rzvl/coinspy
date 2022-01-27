@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 export const StyledFooter = styled.footer`
   width: 100%;
   padding: 2.5rem 5rem;
+  margin-top: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;

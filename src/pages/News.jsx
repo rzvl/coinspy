@@ -1,9 +1,10 @@
+import CryptoNewsList from '../components/CryptoNewsList';
 import { Container } from '../styles/Container.styled';
 
 const News = () => {
   return (
     <Container>
-      <span>This is News page</span>
+      <CryptoNewsList />
     </Container>
   );
 };
