@@ -4,6 +4,7 @@ import { useGetCryptosQuery } from '../services/cryptoApi';
 import { StyledCenteredTitle, StyledCenteredSubtitle } from '../styles/Title.styled';
 import { Container } from '../styles/Container.styled';
 import ShowMoreBtn from '../components/ShowMoreBtn';
+import CryptoNewsList from '../components/CryptoNewsList';
 
 const Home = () => {
   const {data, isFetching} = useGetCryptosQuery(10);
@@ -39,9 +40,13 @@ const Home = () => {
       <StyledCenteredTitle>Global Crypto Stats</StyledCenteredTitle>
       <StyledCenteredSubtitle>Total Cryptocurrencies and Market Stats</StyledCenteredSubtitle>
       <StatsCard list={marketStats} />
-      <StyledCenteredTitle>Top 10 Cryptocurrencies by Market Cap</StyledCenteredTitle>
+      <StyledCenteredTitle>Top 10 Cryptos by Market Cap</StyledCenteredTitle>
       <CryptosTable simplified />
       <ShowMoreBtn text={'Show More Cryptos'} to={'cryptocurrencies'} />
+      <hr />
+      <StyledCenteredTitle>Latest Crypto News</StyledCenteredTitle>
+      <CryptoNewsList simplified />
+      <ShowMoreBtn text={'Show More News'} to={'news'} />
     </Container>
   );
 };
