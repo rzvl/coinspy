@@ -9,11 +9,13 @@ export const StyledCryptosTable = styled.div`
     border-collapse: collapse;
     min-width: 100%;
     font-size: 1.5rem;
+    @media (max-width: ${({ theme }) => theme.screens.xs}) {
+      font-size: 1rem;
+    }
   }
   thead {
     position: sticky;
     top: 0;
-    font-size: 1.5rem;
     text-align: left;
     background-color: ${({ theme }) => theme.colors.purple};
     color: ${({ theme }) => theme.colors.white};
@@ -62,6 +64,16 @@ export const StyledCryptosTable = styled.div`
     transition-duration: 150ms;
     &:hover {
       background-color: #ede9fe;
+    }
+  }
+  .sm-hidden {
+    @media (max-width: ${({ theme }) => theme.screens.sm}) {
+      display: none;
+    }
+  }
+  .xxs-hidden {
+    @media (max-width: ${({ theme }) => theme.screens.sm}) {
+      display: none;
     }
   }
 `;

@@ -6,8 +6,10 @@ export const StyledLineChart = styled.div`
 
 export const ChartTitles = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  column-gap: 3rem;
   margin: 2rem 0;
   h3 {
     font-size: 2.2rem;

@@ -26,11 +26,11 @@ const CryptosTable = ({simplified}) => {
       <table>
         <thead>
           <tr>
-            <th>Rank</th>
-            <th>Cryptocurrency</th>
-            <th>Price</th>
-            <th>Market Cap</th>
-            <th>24h</th>
+            <th scope="col">Rank</th>
+            <th scope="col">Cryptocurrency</th>
+            <th scope="col">Price</th>
+            <th scope="col" className="xxs-hidden">Market Cap</th>
+            <th scope="col" className="sm-hidden">24h</th>
           </tr>
         </thead>
         <tbody>
@@ -47,8 +47,8 @@ const CryptosTable = ({simplified}) => {
               </RowLink>
             </td>
             <td><RowLink to={`/crypto/${currency.uuid}`}>${millify(currency.price)}</RowLink></td>
-            <td><RowLink to={`/crypto/${currency.uuid}`}>{millify(currency.marketCap)}</RowLink></td>
-            <td><RowLink to={`/crypto/${currency.uuid}`}>{millify(currency.change)}%</RowLink></td>
+            <td className="xxs-hidden"><RowLink to={`/crypto/${currency.uuid}`}>{millify(currency.marketCap)}</RowLink></td>
+            <td className="sm-hidden"><RowLink to={`/crypto/${currency.uuid}`}>{millify(currency.change)}%</RowLink></td>
           </tr>
           ))}
         </tbody>

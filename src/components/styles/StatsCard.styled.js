@@ -20,7 +20,7 @@ export const DataItem = styled.div`
   dt {
     margin: 0;
     padding: 0;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 500;
     color: ${({ theme }) => theme.colors.gray};
     order: 2;
@@ -28,7 +28,7 @@ export const DataItem = styled.div`
   dd {
     margin: 0;
     padding: 0;
-    font-size: 4.8rem;
+    font-size: 3.8rem;
     font-weight: 800;
     color: ${({ theme }) => theme.colors.purple};
     order: 1;

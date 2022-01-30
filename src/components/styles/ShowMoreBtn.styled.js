@@ -19,5 +19,8 @@ export const StyledShowMoreBtn = styled.div`
       background-color: ${({ theme }) => theme.colors.purple};
       color: ${({ theme }) => theme.colors.white};
     }
+    @media (max-width: ${({ theme }) => theme.screens.xs}) {
+      font-size: 1.5rem;
+    }
   }
 `;

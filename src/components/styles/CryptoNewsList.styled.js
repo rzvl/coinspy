@@ -5,6 +5,9 @@ export const StyledCryptoNewsList = styled.div`
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
   margin: 2rem auto;
+  @media (max-width: ${({ theme }) => theme.screens.md}) {
+    grid-template-columns: minmax(0, 1fr);
+  }
 `;
 
 export const PostCard = styled.article`
@@ -29,6 +32,9 @@ export const PostCard = styled.article`
     color: #6b7280;
     margin: 0;
   }
+  @media (max-width: ${({ theme }) => theme.screens.xs}) {
+    padding: 2rem;
+  }
 `;
 
 export const CtaLink = styled.div`
@@ -41,6 +47,7 @@ export const CtaLink = styled.div`
 export const PostMetaData = styled.p`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   span {
     font-size: 1.4rem;
   }

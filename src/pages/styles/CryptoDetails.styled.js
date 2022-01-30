@@ -45,6 +45,12 @@ export const CoinStats = styled.div`
       background-color: #ede9fe;
     }
   }
+  @media (max-width: ${({ theme }) => theme.screens.md}) {
+    flex-direction: column;
+    & > div {
+      width: 100%;
+    }
+  }
 `;
 
 export const CoinStatsRow = styled.div`
@@ -97,8 +103,7 @@ export const CoinDescription = styled.div`
       background-color: #ede9fe;
     }
   }
-`;
-
-export const CoinLinks = styled.div`
-  display: flex;
+  @media (max-width: ${({ theme }) => theme.screens.md}) {
+    flex-direction: column;
+  }
 `;

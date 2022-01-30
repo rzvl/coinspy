@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import millify from 'millify';
 import HTMLReactParser from "html-react-parser";
 import { Container } from "../styles/Container.styled";
-import { CoinDescription, CoinDetails, CoinLinks, CoinMainHeader, CoinStats, CoinStatsRow, CryptoTable } from "./styles/CryptoDetails.styled";
+import { CoinDescription, CoinDetails, CoinMainHeader, CoinStats, CoinStatsRow, CryptoTable } from "./styles/CryptoDetails.styled";
 import { StyledCenteredSubtitle, StyledTitle } from "../styles/Title.styled";
 import { useGetCryptoDetailsQuery, useGetCoinHistoryQuery } from "../services/cryptoApi";
 import { AiOutlineMoneyCollect, AiOutlineDollarCircle, AiOutlineFund, AiOutlineExclamationCircle, AiOutlineStop, AiOutlineTrophy, AiOutlineCheck, AiOutlineNumber, AiOutlineThunderbolt, AiOutlineLink } from "react-icons/ai";
