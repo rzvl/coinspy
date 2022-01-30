@@ -36,9 +36,9 @@ const CryptosTable = ({simplified}) => {
         <tbody>
           {cryptos?.map(currency => (
           <tr key={currency.uuid}>
-            <td><RowLink to={`crypto/${currency.uuid}`}>{currency.rank}</RowLink></td>
+            <td><RowLink to={`/crypto/${currency.uuid}`}>{currency.rank}</RowLink></td>
             <td>
-              <RowLink to={`crypto/${currency.uuid}`}>
+              <RowLink to={`/crypto/${currency.uuid}`}>
                 <span className='cryptos-col'>
                   <img src={currency.iconUrl} alt="" width={25} />
                   <span>{currency.name}</span>
@@ -46,9 +46,9 @@ const CryptosTable = ({simplified}) => {
                 </span>
               </RowLink>
             </td>
-            <td><RowLink to={`crypto/${currency.uuid}`}>${millify(currency.price)}</RowLink></td>
-            <td><RowLink to={`crypto/${currency.uuid}`}>{millify(currency.marketCap)}</RowLink></td>
-            <td><RowLink to={`crypto/${currency.uuid}`}>{millify(currency.change)}%</RowLink></td>
+            <td><RowLink to={`/crypto/${currency.uuid}`}>${millify(currency.price)}</RowLink></td>
+            <td><RowLink to={`/crypto/${currency.uuid}`}>{millify(currency.marketCap)}</RowLink></td>
+            <td><RowLink to={`/crypto/${currency.uuid}`}>{millify(currency.change)}%</RowLink></td>
           </tr>
           ))}
         </tbody>

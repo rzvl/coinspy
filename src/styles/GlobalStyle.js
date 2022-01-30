@@ -24,6 +24,18 @@ const GlobalStyle = createGlobalStyle`
     margin-bottom: 5rem;
     border-top: 1px solid ${({ theme }) => theme.colors.lightGray};
   }
+
+  select {
+    padding: 0.5rem;
+    width: 15rem;
+    border: 2px solid ${({ theme }) => theme.colors.purple};
+    border-radius: 5px;
+    background-color: white;
+    font-size: 1.6rem;
+    &:focus {
+      border-color: #c4b5fd;
+    }
+  }
 `;
 
 export default GlobalStyle;

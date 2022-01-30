@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import {useGetCryptoNewsQuery} from '../services/cryptoNewsApi';
 import moment from 'moment';
 import { PostCard, CtaLink, StyledCryptoNewsList, PostMetaData } from './styles/CryptoNewsList.styled';
@@ -6,13 +5,6 @@ import { PostCard, CtaLink, StyledCryptoNewsList, PostMetaData } from './styles/
 const CryptoNewsList = ({simplified}) => {
   const count = simplified ? 6 : 100;
   const { data: cryptoNews } = useGetCryptoNewsQuery({newsCategory: 'cryptocurrency', count: count});
-  // const [cryptos, setCryptos] = useState([]);
-  // const [searchTerm, setSearchTerm] = useState('');
-
-  // useEffect(() => {
-  //   const filteredData = cryptosList?.data?.coins.filter(coin => coin.name.toLowerCase().includes(searchTerm.toLowerCase()));
-  //   setCryptos(filteredData);
-  // }, [cryptosList, searchTerm])
 
   if(!cryptoNews?.value) return 'Loading...';
 
