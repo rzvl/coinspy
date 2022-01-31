@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 export const StyledMobileMenu = styled.div`
   position: absolute;
+  z-index: 50;
   top: 6rem;
   left: 0;
   width: 100%;
@@ -10,7 +11,7 @@ export const StyledMobileMenu = styled.div`
   flex-direction: column;
   .active {
     background-color: ${({ theme }) => theme.colors.purple};
-    color: white;
+    color: white !important;
     &:hover {
       color: ${({ theme }) => theme.colors.lightGray};
     }
@@ -24,7 +25,7 @@ export const MobileMenuLink = styled(NavLink)`
   font-size: 1.6rem;
   margin: 0 auto;
   color: ${({ theme }) => theme.colors.gray};
-  background-color: white;
+  background-color: #ede9fe;
   border-bottom: 1px solid ${({ theme }) => theme.colors.lightGray};
   text-decoration: none;
   transition-property: color;

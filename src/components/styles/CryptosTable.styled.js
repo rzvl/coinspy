@@ -15,6 +15,7 @@ export const StyledCryptosTable = styled.div`
   }
   thead {
     position: sticky;
+    z-index: 10;
     top: 0;
     text-align: left;
     background-color: ${({ theme }) => theme.colors.purple};

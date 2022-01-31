@@ -12,7 +12,7 @@ const Navbar = () => {
   <StyledNavbar>
     <Logo to={'/'}>
       <RiSpyFill size={28} color={'#9333ea'} />
-      <span>CoinSpy</span>
+      <span>Coin Spy</span>
     </Logo>
     <nav>
       <StyledNavLink to={'/'} >Home</StyledNavLink>
@@ -22,7 +22,7 @@ const Navbar = () => {
       <HamburgurMenu onClick={handleClick}>
         {open ? <RiCloseFill size={28} color={'#9333ea'} /> : <RiMenuLine size={28} color={'#9333ea'} />}
       </HamburgurMenu>
-      {open && <MobileMenu />}
+      {open && <MobileMenu onClick={handleClick} />}
     </nav>
   </StyledNavbar>
   );

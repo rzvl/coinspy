@@ -10,6 +10,9 @@ export const StyledNavbar = styled.header`
   align-items: center;
   padding: 0 3rem;
   border-bottom: 1px solid ${({ theme }) => theme.colors.lightGray};
+  .active {
+    color: ${({ theme }) => theme.colors.purple};
+  }
 `;
 
 export const StyledNavLink = styled(NavLink)`
